@@ -55,21 +55,15 @@ function generate ()
 
             var allCharacters = all_UppCase + all_LowCase + all_SymCase + all_NumCase;
                   
-              if (conUppCase === true){
-              document.getElementById("password").innerHTML += allCharacters;} 
+              if (
+                  (conUppCase === true) || 
+                  (conLowCase === true) || 
+                  (conSymCase === true) || 
+                  (conNumCase === true)
+                ){document.getElementById("password").innerHTML += allCharacters;} 
               
-              else if (conLowCase === true){
-              document.getElementById("password").innerHTML += allCharacters;}
-
-              else if (conSymCase === true){
-              document.getElementById("password").innerHTML += allCharacters;}
-
-              else if (conNumCase === true){
-              document.getElementById("password").innerHTML += allCharacters;}
-
               else{
-                alert("You Ignored to Generate Password");}
-          
+              alert("You didn't Choose Any Type of Characters!!!");}
       }
   }
 }  
