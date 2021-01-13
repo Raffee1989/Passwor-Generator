@@ -22,53 +22,54 @@
 
 
 
-function generate (){
-    var caseLenght = prompt("How Many Characters?");
+function generate ()
+{
+        var caseLenght = prompt("How Many Characters?");
 
-      if (caseLenght < 8) {
+        if (caseLenght < 8) {
         alert("Low Number of Characters!!!");} 
-        
+          
         else if (caseLenght > 128){
         alert("High Number of Characters!!!");}
-        
+          
         else
-    {
+  {
         
-          var conUppCase = confirm("Any Upper Case Letter? i.e. (A-B-C...)");
-          var conLowCase = confirm("Any Lower Case Letter? i.e. (a-b-c...)");
-          var conSymCase = confirm("Any Special Charactor? i.e. (%, $, #...)");
-          var conNumCase = confirm("Any Number? i.e. (1-2-3...)");
+        var conUppCase = confirm("Any Upper Case Letter? i.e. (A-B-C...)");
+        var conLowCase = confirm("Any Lower Case Letter? i.e. (a-b-c...)");
+        var conSymCase = confirm("Any Special Charactor? i.e. (%, $, #...)");
+        var conNumCase = confirm("Any Number? i.e. (1-2-3...)");
 
-            var uppCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            var lowCase = "abcdefghijklmnopqrstuvwxyz";
-            var symCase = "!'#$%&()*+-./;:<>=?@[]{}~^";
-            var numCase = "0123456789";
-                  //var allCase = uppCase + lowCase + symCase + numCase;
+        var uppCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var lowCase = "abcdefghijklmnopqrstuvwxyz";
+        var symCase = "!'#$%&()*+-./;:<>=?@[]{}~^";
+        var numCase = "0123456789";
                   
-          for (var i = 0; i < caseLenght; i++)
-        {
+        for (var i = 0; i < caseLenght; i++)
+      {
 
-            all_UppCase = uppCase[Math.floor(Math.random() * uppCase.length)];
-            all_LowCase = lowCase[Math.floor(Math.random() * lowCase.length)];
-            all_SymCase = symCase[Math.floor(Math.random() * symCase.length)];
-            all_NumCase = numCase[Math.floor(Math.random() * numCase.length)];
+            var all_UppCase = uppCase[Math.floor(Math.random() * uppCase.length)];
+            var all_LowCase = lowCase[Math.floor(Math.random() * lowCase.length)];
+            var all_SymCase = symCase[Math.floor(Math.random() * symCase.length)];
+            var all_NumCase = numCase[Math.floor(Math.random() * numCase.length)];
 
+            var allCharacters = all_UppCase + all_LowCase + all_SymCase + all_NumCase;
                   
-            if (conUppCase === true){
-              document.getElementById("password").innerHTML += all_UppCase;
+              if (conUppCase === true){
+              document.getElementById("password").innerHTML += allCharacters;} 
+              
+              else if (conLowCase === true){
+              document.getElementById("password").innerHTML += allCharacters;}
 
-              } else if (conLowCase === true){
-              document.getElementById("password").innerHTML += all_LowCase;
+              else if (conSymCase === true){
+              document.getElementById("password").innerHTML += allCharacters;}
 
-              } else if (conSymCase === true){
-              document.getElementById("password").innerHTML += all_SymCase;
+              else if (conNumCase === true){
+              document.getElementById("password").innerHTML += allCharacters;}
 
-              } else if (conNumCase === true){
-              document.getElementById("password").innerHTML += all_NumCase;
-
-              } else{
-                alert("You Ignored to Generate Password");
-              }  
-          }
+              else{
+                alert("You Ignored to Generate Password");}
+          
       }
+  }
 }  
