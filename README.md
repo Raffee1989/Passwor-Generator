@@ -5,12 +5,10 @@
 I was assigned to develop an application that generates passwords for users. Passwords that contain Numbers, Alphabets, Symbols. I had to test my new javascript skill to make this happen.   
 
 ## User Story
-
-```
 AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+* I WANT to randomly generate a password that meets certain criteria
+  * SO THAT I can create a strong password that provides greater security
+
 
 ## Acceptance Criteria
 
